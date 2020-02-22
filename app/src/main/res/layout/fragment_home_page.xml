@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:background="@drawable/aecommercea1_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+
+        android:layout_height="200dp">
+
+        <androidx.appcompat.widget.SearchView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="300dp"
+
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle"
+            android:layout_height="50dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:textSize="21sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/Top"
+            android:text="Top Categories "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/linear"
+            app:layout_constraintTop_toBottomOf="@id/Top"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/counter"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <TextView
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="25sp" android:gravity="center"
+                    android:text="7"
+                    android:background="@drawable/circle"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+                <TextView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:text="14"
+                    android:background="@drawable/circle"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/counter"
+                android:text="Yesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/counter"
+                android:text="Last Week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/counter"
+                android:text="Last month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <com.leochuan.AutoPlayRecyclerView
+        app:layout_constraintTop_toBottomOf="@id/linear"
+            android:layout_marginTop="10dp"
+
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+            android:background="#fff"
+        app:direction="right"
+        app:timeInterval="1500"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
